@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Consentimento LGPD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #744BAA;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Formulário de Consentimento para Tratamento de Dados Pessoais</h1>
+
+<form action="#" method="post">
+    <div class="form-group">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Endereço de E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label>Finalidade do Tratamento de Dados:</label>
+        <label><input type="checkbox" name="finalidade[]" value="servicos"> Prestação de serviços e atendimento ao cliente</label>
+        <label><input type="checkbox" name="finalidade[]" value="marketing"> Envio de newsletters e comunicações de marketing</label>
+        <label><input type="checkbox" name="finalidade[]" value="melhoria"> Melhoria de produtos e serviços</label>
+        <label><input type="checkbox" name="finalidade[]" value="pesquisa"> Realização de pesquisas e análises de mercado</label>
+        <label><input type="checkbox" name="finalidade[]" value="outros"> Outros (especificar):</label>
+        <textarea name="outros_finalidade"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Compartilhamento de Dados:</label>
+        <label><input type="checkbox" name="compartilhamento[]" value="parceiros"> Parceiros comerciais</label>
+        <label><input type="checkbox" name="compartilhamento[]" value="fornecedores"> Fornecedores de serviços</label>
+        <label><input type="checkbox" name="compartilhamento[]" value="autoridades"> Autoridades governamentais, quando exigido por lei</label>
+        <label><input type="checkbox" name="compartilhamento[]" value="outros"> Outros (especificar):</label>
+        <textarea name="outros_compartilhamento"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Consentimento:</label>
+        <label><input type="radio" name="consentimento" value="sim" required> Concordo com o tratamento dos meus dados pessoais.</label>
+        <label><input type="radio" name="consentimento" value="nao" required> Não concordo com o tratamento dos meus dados pessoais.</label>
+    </div>
+
+    <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+    </div>
+
+    <div class="form-group">
+        <button type="submit">Enviar</button>
+    </div>
+</form>
+
+</body>
+</html>
