@@ -1,93 +1,187 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="formulario lgpd">
+    <meta name="author" content="Clayton Santos">
+    <meta name="keywords" content="Portfolio Senac" />
+
+    <link rel="alternate" href="pt-br" hreflang="pt-br" />
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:url" content="https://tkportfolio.netlify.app/form-lgpd" />
+    <meta property="og:title" content="Tkportfolio" />
+    <meta property="og:image" content="/src/images/fav-icon-contact.png" />
+    <meta property="og:description" content="formulario lgpd" />
+
+    <meta name="theme-color" content="#744BAA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#744BAA" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="" />
+    <meta property="business:contact_data:country_name" content="Brazil" />
+    <meta property="business:contact_data:website" content="https://tkportfolio.netlify.app/form-lgpd" />
+    <meta property="business:contact_data:region" content="BA" />
+    <meta property="business:contact_data:email" content="claytongamer228@gmail.com" />
+    <meta property="business:contact_data:phone_number" content="75982484209" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="formulario lgpd" />
+    <meta name="twitter:title" content="Tkportfolio" />
+    <meta name="twitter:image" content="/src/images/fav-icon-contact.png" />
+
+    <meta name="geo.placename" content="LOCALIZAÇÃO" />
+    <meta name="geo.region" content="BR" />
+    <meta name="description" content="formulario lgpd" />
+    <link rel="canonical" href="https://tkportfolio.netlify.app/form-lgpd" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- SEO -->
+
+    <!-- google analytics -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SXPCW25BJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6SXPCW25BJ');
+    </script>
+
+    <!-- cookies -->
+
+    <meta name="adopt-website-id" content="1b2ba01a-2ab5-4039-84e5-ec96c5db1166" />
+    <script src="//tag.goadopt.io/injector.js?website_code=1b2ba01a-2ab5-4039-84e5-ec96c5db1166"
+        class="adopt-injector"></script>
+
+    <link rel="shortcut icon" href="./src/images/fav-icon-contact.png" type="image/x-icon">
     <title>Formulário de Consentimento LGPD</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+
         .form-group {
             margin-bottom: 15px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 5px;
         }
-        .form-group input, .form-group textarea {
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group textarea {
             width: 100%;
+            height: 3.8rem;
             padding: 8px;
             box-sizing: border-box;
         }
-        .form-group input[type="checkbox"] {
-            width: auto;
+
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
         }
-        .form-group textarea {
-            height: 100px;
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
         }
-        .form-group button {
+
+        button {
             padding: 10px 20px;
             background-color: #744BAA;
             color: white;
             border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
-        .form-group button:hover {
-            background-color: #45a049;
+
+        button:hover {
+            background-color: #7132c3;
         }
     </style>
 </head>
+
 <body>
 
-<h1>Formulário de Consentimento para Tratamento de Dados Pessoais</h1>
+    <h1>Formulário de Consentimento para Tratamento de Dados Pessoais</h1>
 
-<form action="#" method="post">
-    <div class="form-group">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
-    </div>
+    <form id="lgpdForm">
+        <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <span class="error-message" id="nomeError"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="email">Endereço de E-mail:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
+        <div class="form-group">
+            <label for="email">Endereço de E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Finalidade do Tratamento de Dados:</label>
-        <label><input type="checkbox" name="finalidade[]" value="servicos"> Prestação de serviços e atendimento ao cliente</label>
-        <label><input type="checkbox" name="finalidade[]" value="marketing"> Envio de newsletters e comunicações de marketing</label>
-        <label><input type="checkbox" name="finalidade[]" value="melhoria"> Melhoria de produtos e serviços</label>
-        <label><input type="checkbox" name="finalidade[]" value="pesquisa"> Realização de pesquisas e análises de mercado</label>
-        <label><input type="checkbox" name="finalidade[]" value="outros"> Outros (especificar):</label>
-        <textarea name="outros_finalidade"></textarea>
-    </div>
+        <div class="form-group">
+            <label>Finalidade do Tratamento de Dados:</label>
+            <label><input type="checkbox" name="finalidade[]" value="servicos"> Prestação de serviços e atendimento ao
+                cliente</label>
+            <label><input type="checkbox" name="finalidade[]" value="marketing"> Envio de newsletters e comunicações de
+                marketing</label>
+            <label><input type="checkbox" name="finalidade[]" value="melhoria"> Melhoria de produtos e serviços</label>
+            <label><input type="checkbox" name="finalidade[]" value="pesquisa"> Realização de pesquisas e análises de
+                mercado</label>
+            <label><input type="checkbox" name="finalidade[]" value="outros"> Outros (especificar):</label>
+            <textarea name="outros_finalidade" id="outros_finalidade"></textarea>
+            <span class="error-message" id="finalidadeError"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Compartilhamento de Dados:</label>
-        <label><input type="checkbox" name="compartilhamento[]" value="parceiros"> Parceiros comerciais</label>
-        <label><input type="checkbox" name="compartilhamento[]" value="fornecedores"> Fornecedores de serviços</label>
-        <label><input type="checkbox" name="compartilhamento[]" value="autoridades"> Autoridades governamentais, quando exigido por lei</label>
-        <label><input type="checkbox" name="compartilhamento[]" value="outros"> Outros (especificar):</label>
-        <textarea name="outros_compartilhamento"></textarea>
-    </div>
+        <div class="form-group">
+            <label>Compartilhamento de Dados:</label>
+            <label><input type="checkbox" name="compartilhamento[]" value="parceiros"> Parceiros comerciais</label>
+            <label><input type="checkbox" name="compartilhamento[]" value="fornecedores"> Fornecedores de
+                serviços</label>
+            <label><input type="checkbox" name="compartilhamento[]" value="autoridades"> Autoridades governamentais,
+                quando exigido por lei</label>
+            <label><input type="checkbox" name="compartilhamento[]" value="outros"> Outros (especificar):</label>
+            <textarea name="outros_compartilhamento" id="outros_compartilhamento"></textarea>
+            <span class="error-message" id="compartilhamentoError"></span>
+        </div>
 
-    <div class="form-group">
-        <label>Consentimento:</label>
-        <label><input type="radio" name="consentimento" value="sim" required> Concordo com o tratamento dos meus dados pessoais.</label>
-        <label><input type="radio" name="consentimento" value="nao" required> Não concordo com o tratamento dos meus dados pessoais.</label>
-    </div>
+        <div class="form-group">
+            <label>Consentimento:</label>
+            <label><input type="radio" name="consentimento" value="sim" required> Concordo com o tratamento dos meus
+                dados pessoais.</label>
+            <label><input type="radio" name="consentimento" value="nao" required> Não concordo com o tratamento dos meus
+                dados pessoais.</label>
+            <span class="error-message" id="consentimentoError"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="data">Data:</label>
-        <input type="date" id="data" name="data" required>
-    </div>
+        <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+            <span class="error-message" id="dataError"></span>
+        </div>
 
-    <div class="form-group">
-        <button type="submit">Enviar</button>
-    </div>
-</form>
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
 
+    <!-- scripts -->
+
+    <script src="./src/scripts/script.js"></script>
 </body>
+
 </html>

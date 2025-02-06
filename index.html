@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO -->
@@ -242,17 +243,21 @@
         <div class="mb-3 display-flex-collum">
           <label for="name">Nome</label>
           <input type="text" class="formControl" id="name">
+          <span class="error-message" id="nameError"></span>
         </div>
         <div class="mb-3 display-flex-collum">
-          <label for="phone">Numero</label>
+          <label for="phone">Número</label>
           <input type="text" class="formControl" id="phone">
+          <span class="error-message" id="phoneError"></span>
         </div>
         <div class="mb-3 display-flex-collum">
           <label for="message">Mensagem</label>
           <textarea class="formControl" id="message" rows="3"></textarea>
+          <span class="error-message" id="messageError"></span>
         </div>
-        <button type="submit" class="btn-form">Submit</button>
+        <button type="submit" class="btn-form">Enviar</button>
       </form>
+
 
 
     </section>
